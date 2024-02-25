@@ -22,14 +22,14 @@ const Container = styled.div`
 const CalculatorComponents = () => {
   const dispatch = useDispatch();
   const result = useSelector((state) => state.calculator.value);
-  const [inputValue, setInputValue] = useState();
+  const [inputValue, setInputValue] = useState("введите номер");
 
   const handleInputChange = (e) => {
     setInputValue(parseFloat(e.target.value));
   };
   return (
     <Container>
-      <h2>Calculator</h2>
+      <h2>Calculators</h2>
       <input type="number" value={inputValue} onChange={handleInputChange} />
       <br />
       <button onClick={() => dispatch(add(inputValue))}>+</button>
