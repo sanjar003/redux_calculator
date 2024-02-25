@@ -40,6 +40,7 @@ const CalculatorComponents = () => {
       <br />
       <div>
         <strong>Result:</strong>
+        {/* {result} */}
         {result}
       </div>
     </Container>
